@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{11D14E0D-9423-40C5-97AB-87991CA33411}</ProjectGuid>
+    <ProjectGuid>{E64FE7E0-D996-45E1-B76B-46C0EEE51CEA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EmployManagement</RootNamespace>
-    <AssemblyName>EmployManagement</AssemblyName>
+    <RootNamespace>Employee_Management</RootNamespace>
+    <AssemblyName>Employee_Management</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -76,7 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="ViewEmployee.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -84,27 +83,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewEmployee.aspx.cs">
-      <DependentUpon>ViewEmployee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewEmployee.aspx.designer.cs">
-      <DependentUpon>ViewEmployee.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Employ_BLL\Employ_BLL.csproj">
-      <Project>{d4a1c7a5-d9ca-44a9-ab78-afaaeb6a97f2}</Project>
-      <Name>Employ_BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Employ_BO\Employ_BO.csproj">
-      <Project>{7c498b38-23c9-4e2a-9a25-3257dc32e051}</Project>
-      <Name>Employ_BO</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -119,9 +101,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57957</DevelopmentServerPort>
+          <DevelopmentServerPort>58301</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57957/</IISUrl>
+          <IISUrl>http://localhost:58301/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
