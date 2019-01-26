@@ -88,6 +88,16 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Employ_BLL\Employ_BLL.csproj">
+      <Project>{d4a1c7a5-d9ca-44a9-ab78-afaaeb6a97f2}</Project>
+      <Name>Employ_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Employ_BO\Employ_BO.csproj">
+      <Project>{7c498b38-23c9-4e2a-9a25-3257dc32e051}</Project>
+      <Name>Employ_BO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
