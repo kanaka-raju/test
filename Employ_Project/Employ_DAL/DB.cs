@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using Employ_BO;
 
 namespace Employ_DAL
 {
@@ -35,6 +36,37 @@ namespace Employ_DAL
             sda.Fill(ds);
 
             return ds;
+
+        }
+
+        public int AddEmployee(Employ emp)
+        {
+
+            con = new SqlConnection(constring);
+
+            cmd = new SqlCommand("usp_addEmployee", con);
+
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@Employ_id",emp.Emp_id);
+
+            cmd.Parameters.AddWithValue("@Employ_name", emp.Emp_name);
+
+            cmd.Parameters.AddWithValue("@Employ_salary", emp.Emp_salary);
+
+            cmd.Parameters.AddWithValue("@Employ_dept", emp.Emp_dept);
+
+            con.Open();
+
+            int n = cmd.ExecuteNonQuery();
+
+            return n;
+
+
+
+
+
+
 
         }
     }

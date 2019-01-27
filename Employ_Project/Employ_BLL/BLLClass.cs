@@ -4,16 +4,24 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Employ_BO;
 using Employ_DAL;
 
 namespace Employ_BLL
 {
     public class BLLClass
     {
+        DB dB = new DB();
+
         public DataSet bindEmployees()
         {
-            DB dB = new DB();
+            
             return dB.viewEmployees();
+        }
+
+        public int AddEmploy(Employ emp)
+        {
+            return dB.AddEmployee(emp);
         }
     }
 }
