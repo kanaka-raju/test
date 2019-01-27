@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace Employee_Management
+namespace Employ_Project
 {
     public class Global : System.Web.HttpApplication
     {
