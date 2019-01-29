@@ -39,6 +39,44 @@ namespace Employ_DAL
 
         }
 
+        public int deleteEmployee(string v)
+        {
+            con = new SqlConnection(constring);
+
+            cmd = new SqlCommand("usp_deleteEmploy", con);
+
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@Employ_id", v);
+
+            con.Open();
+
+            int d = cmd.ExecuteNonQuery();
+
+            return d;
+
+
+        }
+
+        public DataSet getSingleEmploy(int v)
+        {
+            con = new SqlConnection(constring);
+
+            cmd = new SqlCommand("usp_singleEmploy", con);
+
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@Employ_id",v);
+
+            DataSet ds = new DataSet();
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            sda.Fill(ds);
+
+            return ds;
+        }
+
         public int AddEmployee(Employ emp)
         {
 

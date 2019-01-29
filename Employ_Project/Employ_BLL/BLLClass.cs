@@ -23,5 +23,15 @@ namespace Employ_BLL
         {
             return dB.AddEmployee(emp);
         }
+
+        public DataSet getSingleEmpoly(int v)
+        {
+            return dB.getSingleEmploy(v);
+        }
+
+        public int deleteEmploy(string v)
+        {
+            return dB.deleteEmployee(v);
+        }
     }
 }

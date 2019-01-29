@@ -43,6 +43,13 @@
                         <asp:Button ID="btn_submit" runat="server" OnClick="create_employ" Text="Submit" />
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lbl_message" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
             </table>
         </div>
     </form>

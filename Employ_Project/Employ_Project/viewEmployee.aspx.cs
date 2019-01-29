@@ -36,5 +36,25 @@ namespace Employ_Project
 
         }
 
+        protected void grdView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName== "cmdEdit")
+            {
+                Response.Redirect("AddEmployee.aspx?Employ_id="+Convert.ToString(e.CommandArgument));
+            }
+
+
+            if (e.CommandName == "cmdDelete")
+            {
+                BLLClass bLLClass = new BLLClass();
+
+                int d = bLLClass.deleteEmploy(Convert.ToString(e.CommandArgument));
+
+                Response.Redirect("viewEmployee.aspx");
+
+            }
+
+
+        }
     }
 }

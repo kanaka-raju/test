@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Employ_Project {
+namespace ClientApplication {
     
     
-    public partial class AddEmployee {
+    public partial class Home {
         
         /// <summary>
         /// form1 control.
@@ -22,40 +22,31 @@ namespace Employ_Project {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txt_name control.
+        /// txt_first control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_name;
+        protected global::System.Web.UI.WebControls.TextBox txt_first;
         
         /// <summary>
-        /// txt_salary control.
+        /// txt_second control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_salary;
+        protected global::System.Web.UI.WebControls.TextBox txt_second;
         
         /// <summary>
-        /// txt_dept control.
+        /// btn_Add control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_dept;
-        
-        /// <summary>
-        /// btn_submit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_submit;
+        protected global::System.Web.UI.WebControls.Button btn_Add;
         
         /// <summary>
         /// lbl_message control.
