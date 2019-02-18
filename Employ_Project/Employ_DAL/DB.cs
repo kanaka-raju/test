@@ -94,15 +94,24 @@ namespace Employ_DAL
 
             cmd.Parameters.AddWithValue("@Employ_dept", emp.Emp_dept);
 
+            SqlParameter param = new SqlParameter("@emp_out",SqlDbType.Int);
+
+            param.Direction = ParameterDirection.Output;
+
+            cmd.Parameters.Add(param);
+
             con.Open();
 
             int n = cmd.ExecuteNonQuery();
 
-            return n;
+            int emp_out=0;
 
+            if (n > 0)
+            {
+                emp_out= Convert.ToInt32(cmd.Parameters["@emp_out"].Value);
+            }
 
-
-
+            return emp_out;
 
 
 

@@ -66,12 +66,19 @@ namespace Employ_Project
 
             int id = bLLClass.AddEmploy(emp);
 
+            if (id == -1)
+            {
+                lbl_message.Text = "Updated";
+            }
+
+
             if (id > 0)
             {
-                lbl_message.Text = "Employee inserted successfully";
+                lbl_message.Text = "Employee inserted successfully with id"+id;
 
             }
 
+            
             else
             {
                 lbl_message.Text = "Insert unsuccessful";
