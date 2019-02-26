@@ -14,13 +14,20 @@ namespace Employ_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                if(Request.QueryString["Employ_id"] != null)
+            if (Convert.ToString(Session["login"]) =="yes") {
+                if (!IsPostBack)
                 {
-                    bindEmployee();
+                    if (Request.QueryString["Employ_id"] != null)
+                    {
+                        bindEmployee();
+                    }
                 }
             }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
+
         }
 
         private void bindEmployee()
@@ -66,10 +73,7 @@ namespace Employ_Project
 
             int id = bLLClass.AddEmploy(emp);
 
-            if (id == -1)
-            {
-                lbl_message.Text = "Updated";
-            }
+            
 
 
             if (id > 0)
@@ -85,7 +89,10 @@ namespace Employ_Project
             }
 
 
-
+            if (id == -1)
+            {
+                lbl_message.Text = "Updated";
+            }
 
 
 

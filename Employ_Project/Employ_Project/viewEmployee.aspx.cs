@@ -13,9 +13,16 @@ namespace Employ_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Convert.ToString(Session["login"]) == "yes")
             {
-                bindEmployee();
+                if (!IsPostBack)
+                {
+                    bindEmployee();
+                }
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
             }
         }
 

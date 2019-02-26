@@ -39,6 +39,33 @@ namespace Employ_DAL
 
         }
 
+        public int verifyLoginDetails(string username, string password)
+        {
+            con = new SqlConnection(constring);
+
+            cmd = new SqlCommand("usp_verifyLogin", con);
+
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@username", username);
+
+            cmd.Parameters.AddWithValue("@password", password);
+
+            SqlParameter param = new SqlParameter("@login_out", SqlDbType.Int);
+
+            param.Direction = ParameterDirection.Output;
+
+            cmd.Parameters.Add(param);
+
+            con.Open();
+
+            int n = cmd.ExecuteNonQuery();
+
+
+            return Convert.ToInt32(cmd.Parameters["@login_out"].Value); 
+
+        }
+
         public int deleteEmployee(string v)
         {
             con = new SqlConnection(constring);

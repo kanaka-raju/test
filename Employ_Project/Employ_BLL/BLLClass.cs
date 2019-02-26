@@ -33,5 +33,10 @@ namespace Employ_BLL
         {
             return dB.deleteEmployee(v);
         }
+
+        public int verifyLogin(string username, string password)
+        {
+            return dB.verifyLoginDetails(username, password);
+        }
     }
 }
